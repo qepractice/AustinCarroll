@@ -1,0 +1,60 @@
+package assignmentFour;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+
+public class MobileBrowserAutomation {
+
+	public static AndroidDriver<MobileElement> driver;
+	
+	public static <T> void main(String[] args) throws MalformedURLException {
+		DesiredCapabilities capabilities = new DesiredCapabilities ();
+		
+
+			capabilities.setCapability("chromedriverExecutable", "C:\\Users\\aucarroll\\Desktop\\Automation Training\\chromedriver.exe");
+			capabilities.setCapability("automationName","UiAutomator1");
+			capabilities.setCapability("deviceName","Pixel 3 XL API 24");
+			capabilities.setCapability("platformVersion", "7");
+			capabilities.setCapability("platformName", "Android");
+			//capabilities.setCapability("appPackage", "com.android.chrome");
+			//capabilities.setCapability("appActivity","com.google.android.apps.chrome.Main");
+			capabilities.setCapability("browserName","Chrome");
+			//add C:\Users\aucarroll\Desktop\Automation Training\chromedriver.exe
+			
+			
+			driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			driver.get("http://www.amazon.com"); 
+			
+			//type in search bar
+			driver.findElements(By.id("//*[@id=\"skip-sidemenu\"]")).get(0).click();
+			//.get(0).sendKeys("Appium Book");
+			//driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[3]/div/form/div[2]/div/input")).click();
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			//TouchAction = new TouchAction (driver).tap(1326, 2648).perform();
+			//(new TouchAction(driver)).tap(1326, 2648).perform()
+		}
+		
+		}
+		
+		
+		
+	
+
+

@@ -1,0 +1,58 @@
+2020-06-18 15:11:08:206 [Appium] Welcome to Appium v1.15.1
+2020-06-18 15:11:08:208 [Appium] Non-default server args:
+2020-06-18 15:11:08:209 [Appium]   logFile: C:\Users\aucarroll\eclipse-workspace\AssignmentThree\src\test\resources\logs\log.txt
+2020-06-18 15:11:08:210 [Appium]   localTimezone: true
+2020-06-18 15:11:08:319 [Appium] Appium REST http interface listener started on 0.0.0.0:4723
+2020-06-18 15:11:08:412 [HTTP] --> GET /wd/hub/status
+2020-06-18 15:11:08:412 [HTTP] {}
+2020-06-18 15:11:08:414 [GENERIC] Calling AppiumDriver.getStatus() with args: []
+2020-06-18 15:11:08:415 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.15.1"}}
+2020-06-18 15:11:08:420 [HTTP] <-- GET /wd/hub/status 200 6 ms - 68
+2020-06-18 15:11:08:421 [HTTP] 
+2020-06-18 15:11:09:840 [HTTP] --> POST /wd/hub/session
+2020-06-18 15:11:09:841 [HTTP] {"desiredCapabilities":{"app":"C:\\Users\\aucarroll\\eclipse-workspace\\AssignmentThree\\.\\app\\com.mobeta.android.demodslv.apk","automationName":"UiAutomator1","platformName":"Android","deviceName":"Pixel 3 XL API 24","platformVersion":"7"},"capabilities":{"firstMatch":[{"appium:app":"C:\\Users\\aucarroll\\eclipse-workspace\\AssignmentThree\\.\\app\\com.mobeta.android.demodslv.apk","appium:automationName":"UiAutomator1","appium:deviceName":"Pixel 3 XL API 24","platformName":"android","appium:platformVersion":"7"}]}}
+2020-06-18 15:11:09:841 [W3C] Calling AppiumDriver.createSession() with args: [{"app":"C:\\Users\\aucarroll\\eclipse-workspace\\AssignmentThree\\.\\app\\com.mobeta.android.demodslv.apk","automationName":"UiAutomator1","platformName":"Android","deviceName":"Pixel 3 XL API 24","platformVersion":"7"},null,{"firstMatch":[{"appium:app":"C:\\Users\\aucarroll\\eclipse-workspace\\AssignmentThree\\.\\app\\com.mobeta.android.demodslv.apk","appium:automationName":"UiAutomator1","appium:deviceName":"Pixel 3 XL API 24","platformName":"android","appium:platformVersion":"7"}]}]
+2020-06-18 15:11:09:841 [BaseDriver] Event 'newSessionRequested' logged at 1592507469841 (15:11:09 GMT-0400 (Eastern Daylight Time))
+2020-06-18 15:11:11:684 [Appium] Appium v1.15.1 creating new AndroidDriver (v4.20.0) session
+2020-06-18 15:11:11:689 [BaseDriver] W3C capabilities and MJSONWP desired capabilities were provided
+2020-06-18 15:11:11:689 [BaseDriver] Creating session with W3C capabilities: {
+2020-06-18 15:11:11:689 [BaseDriver]   "alwaysMatch": {
+2020-06-18 15:11:11:689 [BaseDriver]     "platformName": "android",
+2020-06-18 15:11:11:690 [BaseDriver]     "appium:app": "C:\\Users\\aucarroll\\eclipse-workspace\\AssignmentThree\\.\\app\\com.mobeta.android.demodslv.apk",
+2020-06-18 15:11:11:690 [BaseDriver]     "appium:automationName": "UiAutomator1",
+2020-06-18 15:11:11:690 [BaseDriver]     "appium:deviceName": "Pixel 3 XL API 24",
+2020-06-18 15:11:11:690 [BaseDriver]     "appium:platformVersion": "7"
+2020-06-18 15:11:11:690 [BaseDriver]   },
+2020-06-18 15:11:11:691 [BaseDriver]   "firstMatch": [
+2020-06-18 15:11:11:691 [BaseDriver]     {}
+2020-06-18 15:11:11:691 [BaseDriver]   ]
+2020-06-18 15:11:11:691 [BaseDriver] }
+2020-06-18 15:11:11:698 [BaseDriver] Session created with session id: d1f88a51-7c62-43b4-9869-e5a5f4ebcd6c
+2020-06-18 15:11:11:723 [ADB] Found 1 'build-tools' folders under 'C:\Users\aucarroll\AppData\Local\Android\Sdk' (newest first):
+2020-06-18 15:11:11:723 [ADB]     C:/Users/aucarroll/AppData/Local/Android/Sdk/build-tools/29.0.3
+2020-06-18 15:11:11:723 [ADB] Using 'adb.exe' from 'C:\Users\aucarroll\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2020-06-18 15:11:11:724 [AndroidDriver] Retrieving device list
+2020-06-18 15:11:11:724 [ADB] Trying to find a connected android device
+2020-06-18 15:11:11:724 [ADB] Getting connected devices...
+2020-06-18 15:11:11:934 [ADB] Connected devices: [{"udid":"emulator-5554","state":"device"}]
+2020-06-18 15:11:11:935 [AndroidDriver] Looking for a device with Android '7'
+2020-06-18 15:11:11:935 [ADB] Setting device id to emulator-5554
+2020-06-18 15:11:11:935 [ADB] Getting device platform version
+2020-06-18 15:11:11:936 [ADB] Running 'C:\Users\aucarroll\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell getprop ro.build.version.release'
+2020-06-18 15:11:12:123 [ADB] Current device property 'ro.build.version.release': 7.0
+2020-06-18 15:11:12:124 [AndroidDriver] Using device: emulator-5554
+2020-06-18 15:11:12:126 [ADB] Using 'adb.exe' from 'C:\Users\aucarroll\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2020-06-18 15:11:12:127 [ADB] Setting device id to emulator-5554
+2020-06-18 15:11:12:128 [ADB] Running 'C:\Users\aucarroll\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell getprop ro.build.version.sdk'
+2020-06-18 15:11:12:290 [ADB] Current device property 'ro.build.version.sdk': 24
+2020-06-18 15:11:12:290 [ADB] Device API level: 24
+2020-06-18 15:11:12:291 [AndroidDriver] Consider setting 'automationName' capability to 'uiautomator2' on Android >= 6, since UIAutomator framework is not maintained anymore by the OS vendor.
+2020-06-18 15:11:12:295 [AndroidDriver] Shutting down Android driver
+2020-06-18 15:11:12:295 [AndroidDriver] Called deleteSession but bootstrap wasn't active
+2020-06-18 15:11:12:296 [ADB] Running 'C:\Users\aucarroll\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am force-stop io.appium.unlock'
+2020-06-18 15:11:12:681 [AndroidDriver] Not cleaning generated files. Add `clearSystemFiles` capability if wanted.
+2020-06-18 15:11:12:682 [BaseDriver] Event 'newSessionStarted' logged at 1592507472682 (15:11:12 GMT-0400 (Eastern Daylight Time))
+2020-06-18 15:11:12:699 [W3C] Encountered internal error running command: Error: The application at 'C:\Users\aucarroll\eclipse-workspace\AssignmentThree\.\app\com.mobeta.android.demodslv.apk' does not exist or is not accessible
+2020-06-18 15:11:12:699 [W3C]     at C:\Users\aucarroll\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\basedriver\helpers.js:158:13
+2020-06-18 15:11:12:729 [HTTP] <-- POST /wd/hub/session 500 2888 ms - 931
+2020-06-18 15:11:12:729 [HTTP] 

@@ -1,0 +1,65 @@
+package assignmentFive;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import com.google.common.collect.ImmutableMap;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class AssignmentFive {
+	
+	public static AndroidDriver<WebElement> driver;
+	
+	
+	public static void main(String[] args) throws MalformedURLException {
+		DesiredCapabilities capabilities = new DesiredCapabilities ();
+		
+
+		capabilities.setCapability("chromedriverExecutable", "C:\\Users\\aucarroll\\Desktop\\Automation Training\\chromedriver.exe");
+		capabilities.setCapability("automationName","UiAutomator1");
+		capabilities.setCapability("deviceName","Pixel 3 XL API 24");
+		capabilities.setCapability("platformVersion", "7");
+		capabilities.setCapability("platformName", "Android");
+		//capabilities.setCapability("appPackage", "com.android.chrome");
+		//capabilities.setCapability("appActivity","com.google.android.apps.chrome.Main");
+		capabilities.setCapability("browserName","Chrome");
+		//add C:\Users\aucarroll\Desktop\Automation Training\chromedriver.exe
+		capabilities.setCapability("appium:chromeOptions", ImmutableMap.of("w3c", false));
+
+		driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.get("http://www.chase.com"); 
+		
+		// Click Hamburger Menu
+		driver.findElement(By.xpath("//*[@id=\"skip-sidemenu\"]")).click();
+		
+		//Select Customer Service
+		
+		//Click on Popular Topics
+		
+		//Click on Search more topics and search any random topic and print result
+		
+		//Close customer service tab
+		
+		//Go back to home page
+		
+		//Click on Give feedback option
+		
+		//Fill the form out
+		
+		//Close Home page and feedback page
+		
+		
+		
+		
+		
+		
+	}
+
+}

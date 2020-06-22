@@ -1,0 +1,23 @@
+INDEX VERSION 1.131+C:\Users\aucarroll\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
+2607653324.index
+1576085494.index
+962229806.index
+3674047551.index
+2229172796.index
+550947310.index
+3455089358.index
+3543010949.index
+3250077196.index
+166245534.index
+1337495807.index
+2512136665.index
+3909894550.index
+1946835131.index
+3025837332.index
+3626312344.index
+1087084286.index
+590909582.index
+746183193.index
+2005756727.index
+3560805056.index
+1877324071.index

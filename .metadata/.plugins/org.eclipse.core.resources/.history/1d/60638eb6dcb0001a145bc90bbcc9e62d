@@ -1,0 +1,70 @@
+package assignmentFour;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+
+public class MobileBrowserAutomation {
+
+	public static AndroidDriver<MobileElement> driver;
+	
+	public static <T> void main(String[] args) throws MalformedURLException {
+		DesiredCapabilities capabilities = new DesiredCapabilities ();
+		
+		capabilities.setCapability("automationName","UiAutomator1");
+		capabilities.setCapability("deviceName","Pixel 3 XL API 24");
+		capabilities.setCapability("platformVersion", "7");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("appPackage", "com.android.chrome");
+		capabilities.setCapability("appActivity","com.google.android.apps.chrome.Main");
+		//add C:\Users\aucarroll\Desktop\Automation Training\chromedriver.exe
+		cap.setCapability("chromedriverExecutable", "C:\\Users\\aucarroll\\Desktop\\Automation Training\\chromedriver.exe");
+		
+		driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		//Accept & Continue
+		driver.findElements(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/android.widget.FrameLayout/android.widget.Button\r\n" + 
+				"")).get(0).click();
+		//No Thanks
+		driver.findElements(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button[1]\r\n" + 
+				"")).get(0).click();
+		// elipsis press
+		driver.findElements(By.xpath("//android.widget.ImageButton[@content-desc=\"More options\"]")).get(0).click();
+		// new tab
+		driver.findElements(By.xpath("//android.widget.TextView[@content-desc=\"New tab\"]\r\n" + 
+				"")).get(0).click();
+		//amazon widget
+		driver.findElements(By.xpath("//android.support.v7.widget.RecyclerView[@content-desc=\"New tab\"]/android.widget.LinearLayout[1]/android.widget.FrameLayout[2]/android.widget.FrameLayout[3]\r\n" + 
+				"")).get(0).click();		
+		//Below is the advanced button to click
+		//action.press("736, 2648").release().perform();
+		
+		//mobiledriver.findElements(By.CssSelector(736,2648)).get(0).click();
+		driver.findElements(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View/android.view.View[2]/android.widget.Button[2]\r\n" + 
+				"")).get(0).click();
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		//proceed to amazon.com
+		driver.findElements(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[2]/android.view.View\r\n" + 
+				"")).get(0).click();
+		//Type in Search Bar
+		driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[4]/android.view.View[1]/android.view.View/android.widget.EditText\r\n" + 
+				"")).sendKeys("Appium Book");
+		//Click Search
+		driver.findElements(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[4]/android.view.View[2]/android.view.View/android.view.View\r\n" + 
+				"")).get(0).click();
+		
+		
+		
+		//TouchAction = new TouchAction (driver).tap(1326, 2648).perform();
+		//(new TouchAction(driver)).tap(1326, 2648).perform()
+		
+		
+	}
+
+}

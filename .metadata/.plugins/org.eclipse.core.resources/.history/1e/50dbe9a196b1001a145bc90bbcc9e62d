@@ -1,0 +1,20 @@
+package assignmentThree;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class DragAndDrop {
+
+	public static void main(String[] args) {
+		
+		
+	DesiredCapabilities capabilities = new DesiredCapabilities
+			
+			capabilities.setCapability(MobileCapabilityType.Device_Name, "Android");
+	capabilities.setCapability(MobileCapabilityType.Device_Name, "Android");
+	
+	
+	
+	
+	}
+
+}

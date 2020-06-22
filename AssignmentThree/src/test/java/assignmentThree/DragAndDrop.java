@@ -1,0 +1,65 @@
+package assignmentThree;
+
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.time.Duration;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.MobileDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.ElementOption;
+
+public class DragAndDrop {
+	
+public static AndroidDriver<MobileElement> driver;
+
+	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+		
+		AppiumDriverLocalService service = AppiumDriverLocalService.buildService(
+				new AppiumServiceBuilder().usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe"))
+				.withAppiumJS(new File("C:\\Users\\aucarroll\\AppData\\Local\\Programs\\Appium\\resources\\app\\node_modules\\appium\\build\\lib\\main.js"))
+				.withLogFile(new File(System.getProperty("user.dir")+"\\src\\test\\resources\\logs\\log.txt"))
+				.withArgument(GeneralServerFlag.LOCAL_TIMEZONE));
+		service.start();	
+		
+	File app = new File(".\\app\\com.mobeta.android.demodslv-0.5.0-3_APKdot.com.apk");	
+	DesiredCapabilities capabilities = new DesiredCapabilities();
+			
+	capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 3 XL API 24");
+	capabilities.setCapability("automationName","UiAutomator1");
+	capabilities.setCapability("platformVersion", "7");
+	capabilities.setCapability("platformName", "Android");
+	capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+	
+	driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	
+	driver.findElements(By.id("com.mobeta.android.demodslv:id/activity_title")).get(0).click();
+	driver.findElements(By.id("com.mobeta.android.demodslv:id/drag_handle")).get(0);
+	//com.mobeta.android.demodslv:id/activity_desc use this for line 53 ID.
+	MobileElement firstElement = driver.findElements(By.id("com.mobeta.android.demodslv:id/drag_handle")).get(0);
+	MobileElement fourthElement = driver.findElements(By.id("com.mobeta.android.demodslv:id/drag_handle")).get(4);
+
+	TouchAction action = new TouchAction(driver);
+	action.press(ElementOption.element(firstElement)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000))).moveTo(ElementOption.element(fourthElement)).release().perform();
+		
+	
+	Thread.sleep(5000);
+	driver.quit();
+	service.stop();
+	}
+
+}
